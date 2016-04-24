@@ -58,7 +58,7 @@ public class ForumAction extends ActionSupport implements Serializable,
 		ActionContext.getContext().put("forums", forums);
 		ActionContext.getContext().put("size", forums.size());
 		
-		//获取热门帖子ddd
+		//获取热门帖子
 		List<Topic> topics=topicService.findHotTopics();
 		ActionContext.getContext().put("topics", topics);
 		return "list";
