@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<!-- 
+		一个session-factory只能连接一个数据库
+	-->
+<session-factory>
+
+	<!-- 
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver </property> 
+		<property name="connection.username">root</property>
+		<property name="connection.password">forever</property>
+		<property name="connection.url">
+		jdbc:mysql://localhost:3306/BBS
+		</property> 
+	-->
+
+	<property name="hibernate.dialect">
+		org.hibernate.dialect.MySQL5InnoDBDialect
+	</property>
+	<!-- 
+		作用：根据持久化类和映射文件生成表
+	-->
+	<property name="hbm2ddl.auto">update</property>
+	<!-- 
+		显示hibernate内部生成的sql语句
+	-->
+	<property name="show_sql">true</property>
+	<!-- 	<property name="current_session_context_class">thread</property> -->
+	<mapping resource="cn/wlzy/domain/User.hbm.xml" />
+	<mapping resource="cn/wlzy/domain/Forum.hbm.xml" />
+	<mapping resource="cn/wlzy/domain/Reply.hbm.xml" />
+	<mapping resource="cn/wlzy/domain/Topic.hbm.xml" />
+	<mapping resource="cn/wlzy/domain/MyFile.hbm.xml" />
+	<mapping resource="cn/wlzy/domain/Notice.hbm.xml" />
+	<mapping resource="cn/wlzy/domain/ExamOption.hbm.xml" />
+	<mapping resource="cn/wlzy/domain/ExamTopic.hbm.xml" />
+</session-factory>
+</hibernate-configuration>

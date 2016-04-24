@@ -1,0 +1,63 @@
+*{margin:0px;padding:0px;}
+#otherInfo{width:80%;height:180px;float: left;}
+#head{width:20%;height:180px;float: right;background:#ffffee; }
+#head img{width: 150px;height: 160px;margin: 0px 10px 10px 40px;}
+#otherTopic{width:100%;height:100%;clear: both;}
+table{width: 100%;margin:0px auto;
+		background:#ffffee;
+		border-collapse: collapse;font-size: 18px;
+		font-family: "微软雅黑";
+		text-indent: 6px;
+		}
+table tr{height: 40px;border:1px solid #666;}
+table td{text-align:left;width:60px;height:30px;border:1px solid #666;}
+table a{text-decoration: none;font-size:16px;font-family: "微软雅黑";}
+
+#divTopic p{
+		width:100%;height:23px;
+		margin: auto;
+		font-size:19px;font-family: "微软雅黑";
+		color: blue;
+		line-height: 100%;
+		text-indent: 10px;
+		padding-top: 5px;
+} 
+#divTopic ul{
+		width:100%;height: 70%;
+		margin: auto;
+} 
+#divTopic ul li{
+		height:11.5%;
+		list-style-type: none;
+		background: #ccff99;
+		border:1px solid white;
+		text-indent:10px;
+		width:75%;
+		white-space:nowrap;
+		overflow:hidden;
+		text-overflow:ellipsis;
+		float: left;
+} 
+#divTopic ul li a{
+	vertical-align:middle;
+	text-decoration:none;
+	font-size:15px;font-family: "微软雅黑";
+	color: black;
+	line-height: 100%;
+	text-indent: 3px; 
+	padding-right: 5px;
+}
+
+#divTopic ul span{
+	border:1px solid white;
+	width:24%;
+	background:#ccff99;
+	font-size:13px;font-family: "微软雅黑";
+	color: black;
+	height:11.5%;
+	line-height: 100%;
+	float: right;
+}
+#divTopic ul li a:hover{font-weight:bold;color:orange;}
+
+.pageRoll5{width: 35%;margin: auto;margin-top: 30px;margin-bottom: 30px;}

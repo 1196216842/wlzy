@@ -1,0 +1,46 @@
+*{margin:0px;padding:0px;}
+.top{width:991px;height:130px;margin:0px auto;}
+.content{width:991px;height:430px;margin:0px auto;}
+.bottom{width:991px;height:130px;margin:0px auto;margin-top: 20px;}
+.nav{
+	width:991px;
+	height:35px;
+	background: #ffffcc;
+	margin:0px auto;
+	line-height: 35px;
+}
+
+/**********************************/
+#addUI{
+	width:991px;
+	height:300px;
+	margin:10px auto;
+	margin-bottom: 70px;
+} 
+ #addUI #forum_title{
+	width:991px;
+	height:30px;
+	font-size:20px;
+	margin-bottom: 5px;
+} 
+#addUI #addForm #title{
+	height:30px;
+	width:730px;
+	font-family: "微软雅黑";
+	border:1px solid #ddd;
+	box-shadow:0px 0px 5px #ddd;
+	text-indent: 3px;
+}
+#addUI #addForm #button{
+   width: 60px;height:30px;
+   font-size: 16px;
+   font-family: "微软雅黑";
+   background: white;
+	color: blue;
+}
+#reply_title{
+	white-space:nowrap; 
+	overflow:hidden;
+	text-overflow:ellipsis; 
+	width:730px;
+}

@@ -1,0 +1,95 @@
+*{margin:0px;padding:0px;}
+.top{width:991px;height:130px;margin:0px auto;}
+.content{width:991px;height:1550px;margin:0px auto;}
+.bottom{width:991px;height:130px;margin:0px auto;margin-top: 20px;}
+/*************************/
+.pageRoll{
+	width:991px;
+	height:30px;
+	line-height:30px;
+	text-align: center;
+	margin:0px auto;
+}
+ #addUI{
+	width:991px;
+	height:230px;
+	margin:10px auto;
+	margin-bottom: 90px;
+} 
+ #addUI #forum_title{
+	width:991px;
+	height:30px;
+	font-size:20px;
+	margin-bottom: 5px;
+} 
+#addUI #addForm #title{
+	height:30px;
+	width:730px;
+	font-family: "微软雅黑";
+	border:1px solid #ddd;box-shadow:0px 0px 5px #ddd;
+	text-indent: 3px;
+}
+#addUI #addForm #button{
+   width: 60px;height:30px;
+   font-size: 16px;
+   font-family: "微软雅黑";
+   background: white;
+	color: blue;
+}
+/******************************/
+.content{border:2px solid #ddd;width:987px;}
+.topic{
+	width:983px;
+	height:94px;
+	border:2px solid #ddd;
+	margin-bottom: 13px;
+	margin-top: 2px;
+	border-radius:5px; 
+	font-size: 17px;
+	font-family: "微软雅黑";
+}
+.topic .topic_title{
+	width:983px;
+	height:30px;
+	color:green;
+	background:#ddd;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	line-height: 30px;
+	
+}
+.topic .topic_content{
+	width:983px;
+	height:30px;
+	text-indent:2em;
+	white-space:nowrap;
+	overflow:hidden;
+	font-size: 16px;
+	text-overflow:ellipsis;
+	line-height: 30px;
+}
+.topic .topic_info{
+	width:983px;
+	height:30px;
+	font-size: 15px;
+	line-height: 30px;
+}
+.topic .topic_info p{
+	float:right;
+	margin-right: 15px;
+}
+
+/* pre{
+		font-size: 14px;
+		font-family:"微软雅黑";
+		text-wrap:normal;
+		display: block;
+		overflow: auto;
+		background: #f4f4f4;
+		padding: 5px 10px;
+		border: 1px solid #eee; 
+		word-wrap: break-word; Internet Explorer 5.5+
+		white-space: pre-wrap; Firefox
+} */					
+ 

@@ -1,0 +1,49 @@
+*{padding:0px;margin:0px;}
+#author{width:100%;height:100% ;/* border:1px solid red; */margin: 0px auto;}
+#tools{
+	width:80%;
+	height:20%;
+	/* border:1px solid  blue; */
+	margin: 20px auto;
+	text-align: center;
+	
+}
+#author {padding-left: 2px;}
+#authorTitle{
+	width: 16%;
+	height: 20px;
+	margin: 0px auto;
+	margin-bottom:5px;
+	color: blue;
+	font-size: 20px;
+	font-family: "微软雅黑";
+} 
+.authors{
+	width:29%;
+	heigth:200px;
+	margin:10px 10px;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	border:3px solid #fff;
+	float:left;
+	margin-left: 30px;
+}
+.authors p{
+	width:100%;
+	text-indent: 4px;
+	height:22px;
+}
+.authors p a{
+	text-decoration: none;
+}
+.authors .title{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.authors .trueName{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.pageRollFile{width:40%;margin: 0px auto;}

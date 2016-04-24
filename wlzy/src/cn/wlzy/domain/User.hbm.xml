@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.wlzy.domain">
+	<class name="User">
+		<id name="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="username"></property>
+		<property name="password"></property>
+		<property name="name"></property>
+		<property name="gender"></property>
+		<property name="phoneNumber"></property>
+		<property name="email"></property>
+		<property name="description"></property>
+		<property name="userType"></property>
+		
+		<!-- topic属性，本类与Topic的一对多 -->
+		<set name="topics" cascade="save-update" inverse="true"><!-- 让多的一方维护关系 -->
+			<key column="authorId"></key>
+			<one-to-many class="Topic"/>
+		</set>
+		<!-- replies属性，本类与Reply的一对多 -->
+		<set name="replies" cascade="save-update" inverse="true"><!-- 用户不要级联删除 -->
+			<key column="authorId"></key>
+			<one-to-many class="Reply"/>
+		</set>
+		<!-- myFiles属性，本类与MyFile的一对多 -->
+		<set name="myFiles" cascade="save-update" inverse="true"><!-- 用户不要级联删除 -->
+			<key column="userId"></key>
+			<one-to-many class="MyFile"/>
+		</set>
+		<!-- notices属性，本类与Notice的一对多 -->
+		<set name="notices" cascade="save-update" inverse="true"><!-- 用户不要级联删除 -->
+			<key column="userId"></key>
+			<one-to-many class="Notice"/>
+		</set>
+		<!-- 应该是多对多的关系 -->
+		<!-- friends属性，本类与User(Friend)的一对多 -->
+		<set name="friends" cascade="save-update"  table="user_friend">
+			<key column="userId"></key>
+			<many-to-many class="User" column="friendId"/>
+		</set>
+		<!-- users属性，本类与User的多对多 -->
+		<set name="users" cascade="save-update" table="user_friend">
+			<key column="friendId"></key>
+			<many-to-many class="User" column="userId"/>
+		</set>
+	</class>
+</hibernate-mapping>
+

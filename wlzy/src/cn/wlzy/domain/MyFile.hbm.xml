@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.wlzy.domain">
+	<class name="MyFile">
+		<id name="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="trueName"></property>
+		<property name="uuidName"></property>
+		<property name="uploadTime" type="timestamp"></property>
+		<property name="fileType"></property>
+		<property name="title"></property>
+		<!-- <property name="flag"></property> -->
+		<!-- user属性，本类与User的多对一 -->
+		<many-to-one name="user" class="User" column="userId"></many-to-one>
+	</class>
+</hibernate-mapping>

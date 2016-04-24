@@ -1,0 +1,205 @@
+*{margin:0px;padding:0px;}
+.top{width:991px;height:130px;margin:0px auto;}
+.content{width:991px;height:1770px;margin:0px auto;}
+.bottom{width:991px;height:130px;margin:0px auto;margin-top: 20px;}
+.nav{
+	width:991px;
+	height:35px;
+	background: #ffffcc;
+	margin:0px auto;
+	line-height: 35px;
+}
+
+/*************************/
+.pageRoll{
+	width:991px;
+	height:30px;
+	line-height:30px;
+	text-align: center;
+	margin:0px auto;
+}
+ #addUI{
+	width:991px;
+	height:230px;
+	margin:10px auto;
+	margin-bottom: 70px;
+} 
+ #addUI #forum_title{
+	width:991px;
+	height:30px;
+	font-size:20px;
+	margin-bottom: 5px;
+} 
+#addUI #addForm #title{
+	height:30px;
+	width:730px;
+	font-family: "微软雅黑";
+	border:1px solid #ddd;box-shadow:0px 0px 5px #ddd;
+	text-indent: 3px;
+}
+#addUI #addForm #button{
+   width: 60px;height:30px;
+   font-size: 16px;
+   font-family: "微软雅黑";
+   background: white;
+	color: blue;
+}
+#show_reply{
+	white-space:nowrap; 
+	overflow:hidden;
+	text-overflow:ellipsis; 
+	width:730px;
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+
+/*********************************************/
+#topic{
+	width:987px;
+	height:496px;
+	border: 2px solid #ddd;
+	border-radius:5px; 
+}
+#topic .userInfo{
+	width:148px;
+	float:left;
+	height:492px;
+	border:1px solid #666;
+	border-radius:5px; 
+}
+#topic .userInfo img{
+	width:144px;
+	height:148px;
+	margin: 1px;
+}
+#topic .userInfo p{
+	width:148px;
+	height:30px;
+	text-align:center;
+	margin-top: 3px;
+}
+#topic .topicInfo{
+	width:701px;
+	height:492px;
+	border:1px solid #666;
+	margin-left:2px;
+	float:left;
+	border-radius:5px; 
+	
+}
+#topic .topicInfo .title{
+	width:701px;
+	height:30px;
+	font-size: 18px;
+	line-height:30px;
+	font-family:"微软雅黑";
+	text-indent: 3px;
+	margin-top: 3px;
+	white-space:nowrap; 
+	overflow:hidden;
+	text-overflow:ellipsis; 
+}
+#topic .topicInfo .info{
+	width:701px;
+	height:450px;
+	/* white-space:nowrap; */
+	overflow:auto;
+	/* text-overflow:ellipsis; */
+}
+#topic .topicInfo .info pre{
+	font-size: 14px;
+	font-family:"微软雅黑";
+	text-wrap:normal;
+	display: block;
+	overflow: auto;
+	background: #f4f4f4;
+	padding: 5px 10px;
+	border: 1px solid #eee; 
+	word-wrap: break-word; /*Internet Explorer 5.5+*/
+	white-space: pre-wrap; /*Firefox*/
+}
+#topic .operate{
+	width:128px;
+	float:right;
+	border:1px solid #666;
+	height:492px;
+	border-radius:5px; 
+	font-size: 14px;
+	font-family:"微软雅黑";
+}
+/***********************回复**********************/
+#reply{
+	width:987px;
+	height:1260px;
+	border: 2px solid #ddd;
+	border-radius:5px; 
+	margin-top: 10px;
+}
+
+.reply .userInfo{
+	width:148px;
+	float:left;
+	height:250px;
+	border:1px solid #666;
+	border-radius:5px; 
+}
+.reply .userInfo img{
+	width:144px;
+	height:148px;
+	margin: 1px;
+}
+.reply .userInfo p{
+	width:148px;
+	height:30px;
+	text-align:center;
+	margin-top: 3px;
+}
+.reply .replyInfo{
+	width:701px;
+	height:250px;
+	border:1px solid #666;
+	margin-left:2px;
+	float:left;
+	border-radius:5px; 
+	
+}
+.reply .replyInfo .title{
+	width:701px;
+	height:30px;
+	font-size: 18px;
+	line-height:30px;
+	font-family:"微软雅黑";
+	text-indent: 3px;
+	margin-top: 3px;
+	white-space:nowrap; 
+	overflow:hidden;
+	text-overflow:ellipsis; 
+}
+.reply .replyInfo .info{
+	width:701px;
+	height:210px;
+	/* white-space:nowrap; */
+	overflow:auto;
+	/* text-overflow:ellipsis; */
+}
+.reply .replyInfo .info pre{
+	font-size: 14px;
+	font-family:"微软雅黑";
+	text-wrap:normal;
+	display: block;
+	overflow: auto;
+	background: #f4f4f4;
+	padding: 5px 10px;
+	border: 1px solid #eee; 
+	word-wrap: break-word; /*Internet Explorer 5.5+*/
+	white-space: pre-wrap; /*Firefox*/
+}
+.reply .operate{
+	width:128px;
+	float:right;
+	border:1px solid #666;
+	height:250px;
+	border-radius:5px; 
+	font-size: 14px;
+	font-family:"微软雅黑";
+}

@@ -1,0 +1,373 @@
+*{margin:0px;padding:0px;}
+.content{border:1px solid #ddd;}
+#divLeft{width:20%;height:100%;border:0px solid red;float: left;background:#eee;}
+#divCenter{width:60%;height:100%;border:0px solid blue;float: left;}
+#divRight{width:20%;height:100%;border:0px solid green;float: right;background: #eee;}
+/*************************************/
+#divLeft #choicTeacher {
+	width: 100%;
+	height: 40px;
+	margin: 0px auto;
+	margin-bottom: 5px;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	line-height: 40px;
+	color: black;
+	background: #aaaacc;
+	text-align: center;
+}
+
+#divLeft #choicTeacher #select1{width:40%;border: 1px solid #666;background: #fff; }
+/*************************************/
+#divLeft .teacherFile {
+	width: 100%;
+	height: 40px;
+	margin: 5px auto;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	line-height: 40px;
+	color: black;
+	background: #5555ff;
+	text-align: center;
+}
+#divLeft .teacherFile:hover{cursor: pointer;}
+/*************************************/
+#divCenter .divSome{width: 100%;height: 100%; }
+#divCenter #notice{width: 100%;height: 100%;/* background:#ffffaa; */background:#fff;}
+#divCenter #vedio{width: 100%;height: 100%;/* background:#eeeedd; */background:#fff;}
+#divCenter #doc{width: 100%;height: 100%;/* background:#dddddd; */background:#fff;}
+#divCenter #audio{width: 100%;height: 100%;/* background:#ccccdd; */background:#fff;}
+#divCenter #image{width: 100%;height: 100%;/* background:#bbbbdd; */background:#fff;}
+#divCenter #other{width: 100%;height: 100%;/* background:#bbbbdd; */background:#fff;}
+/***************通知**********************/
+#divCenter #notice #noticeTitle{
+	width: 16%;
+	height: 20px;
+	margin: 0px auto;
+	margin-bottom:10px;
+	font-size: 20px;
+	font-family: "微软雅黑";
+	color: blue;
+}
+#divCenter .noticeView{
+	font-size: 16px;
+	font-family: "微软雅黑";
+	width: 90%;height:37px;
+	margin: 10px auto;
+	margin-top:0px;
+	background: #dddddd;
+	line-height: 38px;
+}
+#divCenter .noticeView .type1{
+	float: left;
+}
+#divCenter .noticeView .name1{float: left;}
+#divCenter .noticeView .name1 a{
+	text-decoration: none;
+}
+#divCenter .noticeView .title1{
+	float: left;
+	width:33%;
+	margin-left: 10px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	
+}
+#divCenter .noticeView .title1 a{
+	text-decoration: none;
+}
+#divCenter .noticeView .tools1{float: right;margin-right: 10px;}
+#divCenter .noticeView .tools1 a{text-decoration: none;}
+#divCenter .noticeView .postTime1{float: right;margin-right: 10px;}
+
+/*****************视频********************/
+#divCenter  #vedio{padding-left: 2px;width: 100%;}
+#divCenter  #vedio #vedioTitle{
+	width: 16%;
+	height: 5px;
+	margin: 0px auto;
+	margin-bottom:10px;
+	color: blue;
+	font-size: 20px;
+	font-family: "微软雅黑";
+}
+#divCenter  #vedio .vedio{
+	width:29%;
+	heigth:200px;
+	margin:10px 10px;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	border:3px solid #fff;
+	float:left;
+}
+#divCenter  #vedio .vedio p{
+	width:100%;
+	text-indent: 4px;
+	height:22px;
+}
+#divCenter  #vedio .vedio p a{
+	text-decoration: none;
+}
+#divCenter  #vedio .vedio .title2{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+#divCenter  #vedio .vedio .trueName2{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+/***************文档虽然很像，但是由于以后可能还要修改************************/
+#divCenter  #doc{padding-left: 2px;width: 100%;}
+ #divCenter  #doc #docTitle{
+	width: 16%;
+	height: 20px;
+	margin: 0px auto;
+	margin-bottom:5px;
+	color: blue;
+	font-size: 20px;
+	font-family: "微软雅黑";
+} 
+#divCenter  #doc .docs{
+	width:29%;
+	heigth:200px;
+	margin:10px 10px;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	border:3px solid #fff;
+	float:left;
+}
+#divCenter  #doc .docs p{
+	width:100%;
+	text-indent: 4px;
+	height:22px;
+}
+#divCenter  #doc .docs p a{
+	text-decoration: none;
+}
+#divCenter  #doc .docs .title3{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+#divCenter   #doc .docs .trueName3{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+/***************音频虽然很像，但是由于以后可能还要修改************************/
+#divCenter  #audio{padding-left: 2px;width: 100%;}
+#divCenter  #audio #audioTitle{
+	width: 16%;
+	height: 20px;
+	margin: 0px auto;
+	margin-bottom:5px;
+	color: blue;
+	font-size: 20px;
+	font-family: "微软雅黑";
+}
+#divCenter  #audio .audios{
+	width:90%;
+	heigth:20px;
+	margin:10px auto;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	padding-bottom: 10px;
+}
+#divCenter  #audio .audios .tools4{
+	width:20%;
+	float:right;
+}
+#divCenter  #audio #play{
+	width:80%;
+	display:none;
+	margin: 40px auto;
+}
+#divCenter  #audio .audios a{
+	text-decoration: none;
+}
+#divCenter  #audio .audios .uploadTime4{
+	float:right;
+}
+#divCenter   #audio .audios .trueName4{
+	float:left;
+	width:50%;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+/***************图片虽然很像，但是由于以后可能还要修改************************/
+#divCenter  #image{padding-left: 2px;width: 100%;}
+#divCenter  #image #imageTitle{
+	width: 16%;
+	height: 20px;
+	margin: 0px auto;
+	margin-bottom:5px;
+	font-size: 20px;
+	font-family: "微软雅黑";
+}
+#divCenter  #image .images{
+	width:30%;
+	/* heigth:400px; */
+	margin:5px 9px;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	border:1px solid #fff;
+	float:left;
+}
+#divCenter  #image .images img{
+	width:100%;
+	height:100px;
+	
+}
+#divCenter  #image .images span a{
+	text-decoration: none;
+}
+/* #divCenter  #image .images .title5{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+} */
+#divCenter   #image .images .trueName5{
+	width:100%;
+	font-size: 14px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	float:left;
+}
+/***********************其他通知*****************************8*/
+#divCenter #other #otherTitle{
+	width: 16%;
+	height: 20px;
+	margin: 0px auto;
+	margin-bottom:10px;
+	font-size: 20px;
+	font-family: "微软雅黑";
+	color: blue;
+}
+#divCenter .otherView{
+	font-size: 16px;
+	font-family: "微软雅黑";
+	width: 90%;height:37px;
+	margin: 10px auto;
+	margin-top:0px;
+	background: #dddddd;
+	line-height: 38px;
+}
+#divCenter .otherView .type6{
+	float: left;
+}
+#divCenter .otherView .name6{float: left;}
+#divCenter .otherView .name6 a{
+	text-decoration: none;
+}
+#divCenter .otherView .trueName6{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+#divCenter .otherView .tools6{float: right;margin-right: 10px;}
+#divCenter .otherView .tools6 a{text-decoration: none;}
+#divCenter .otherView .postTime6{float: right;margin-right: 10px;}
+/*********************工具***********************/
+ #divRight #fileTool{
+	width:100%;height:130px;
+	border-left:1px solid #fff; 
+	border-bottom:1px solid #fff;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	text-align: center;
+	} 
+ #divRight #fileTool .uploadType{
+	width:70%;
+	margin:0px auto;
+	text-align:center;
+	font-size: 12px;
+	font-family: "微软雅黑";
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+#fileTool .fileForm p{width:80%;margin: 4px auto;}
+#fileTool .fileForm input{width:100%;height: 25px;border: 1px solid #ddd;}
+#fileTool .fileForm .title{width:70%;text-indent: 10px;}
+#fileTool .fileForm .submit{width:40%;margin: 0px auto;background: white;}
+#fileTool .fileForm .file{width: 93%;margin: 0px auto;}
+
+#divRight #fileTool #noticeTool{
+	/* background:#ffffaa; */
+	background:#fff; 
+	padding-bottom: 5px;
+}
+#divRight #fileTool #noticeTool a{
+	text-decoration: none;
+	}
+#divRight #fileTool #vedioTool{
+	/* background:#eeeedd; */
+	background:#fff; 
+	padding-bottom: 5px;
+}
+#divRight #fileTool #docTool{
+	/* background:#dddddd; */
+	background:#fff; 
+	padding-bottom: 5px;
+}
+#divRight #fileTool #audiolTool{
+	/* background:#ccccdd; */
+	background:#fff; 
+	padding-bottom: 5px;
+}
+#divRight #fileTool #imageTool{
+	/* background:#bbbbdd; */
+	background:#fff; 
+	padding-bottom: 5px;
+} 
+#divRight #fileTool #otherTool{
+	/* background:#bbbbdd; */
+	background:#fff; 
+	padding-bottom: 5px;
+} 
+/********************日期时间************************/
+#divRight #date{width:100%;height: 180px;}	
+#divRight #nowTime{width:100%;height:20px;
+						background: #ffffcc;font-size: 16px;
+						line-height:20px;
+						padding-left:2px;
+						color:blue;
+						font-family: "微软雅黑";}	
+#divRight #date table{width:100%;height: 180px;
+						font-size: 16px;
+						font-family: "微软雅黑";
+						background: #ffffcc;border:1px solid #ddd;}	
+/********************分页***********************/
+.pageRollFile{width:31%;margin:10px auto;margin-bottom: 40px;}
+
+#bigIMG{
+	width:500px;
+	height:430px;
+	position: absolute;
+	background:#ffffee;
+	left: 430px;
+	display:none;
+	top: 180px;
+}
+#bigIMG span{
+	float:right;
+	font-size:20px;
+	font-family:'微软雅黑'
+	margin-right:3px;
+	margin-top:5px;
+	font-weight: bold;
+}
+#bigIMG span:hover{cursor: pointer;}
+#bigIMG img{
+	width:500px;
+	height:400px;
+	margin: 5px auto;
+}
+

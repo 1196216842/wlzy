@@ -1,0 +1,26 @@
+*{padding:0px;margin:0px;}
+#exam{width:96%;height:100%;margin:10px auto;}
+.exams{
+	width:17%;
+	height:30px;
+	float: left;
+	margin-bottom: 10px;
+	border:1px solid #ddd;
+	text-align: center;
+	margin-left: 20px;
+	line-height: 30px;
+	 white-space:nowrap;  
+    text-overflow:ellipsis; 
+    overflow: hidden;
+	}
+.exams a{
+	text-decoration: none;
+	font-size: 18px;
+	color:black;
+	font-family: "微软雅黑";
+	}
+.exams a:hover{
+	color:orange;
+	font-weight: bold;
+
+	}

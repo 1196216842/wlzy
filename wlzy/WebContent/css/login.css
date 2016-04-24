@@ -1,0 +1,38 @@
+*{margin:0px;padding:0px;}
+ #loginForm{
+	font-size:18px;color:#666;
+	font-family:"微软雅黑";
+	text-align:center;/*文字在水平方向居中*/
+}
+.loginForm{
+	width:262px;height:300px;
+	margin:0px auto;/*上下 左右（自动）*/
+}
+ .loginForm p{
+	font-size:14px;color:#666;font-family:"微软雅黑";
+	height:42px;
+	line-height:42px;/*当行高和高度相同，则文字在垂直方向居中*/
+}
+ .loginForm p .txt{
+	height:40px;
+	width:250px;
+	border:1px solid #ddd;
+	padding-left:10px;
+}
+.loginForm .but{padding-top:30px;}
+.loginForm .but input{
+	width:250px;
+	height:40px;
+	background:#000000;
+	border:none;
+	color:#fff;
+	font-size:16px;
+	font-family:"微软雅黑";
+
+}
+#radio{
+	width:256px;
+	height:40px;
+	margin: 0px auto;
+}
+.radio{width:13%;margin-right: 10px;}

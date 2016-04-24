@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<!-- <constant name="struts.i18n.encoding" value="UTF-8"/> -->
+	<!-- 把扩展名配置为action -->
+	<constant name="struts.action.extension" value="action" />
+	<!-- 把主题配置为simple -->
+	<constant name="struts.ui.theme" value="simple" />
+	<!-- 设置上传文件大小 500M -->
+	<constant name="struts.multipart.maxSize" value="524288000" />
+	<package name="wlzy" namespace="/" extends="struts-default">
+		
+		<interceptors>
+			<!-- 声明拦截器 -->
+			<interceptor name="privilegeInterceptor"
+				class="cn.wlzy.utils.PrivilegeInterceptor"></interceptor>
+			<!-- 重新定义默认的拦截器 -->
+			<interceptor-stack name="defaultStack">
+				<interceptor-ref name="privilegeInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+
+		<global-results>
+			<result name="noPrivilege">/WEB-INF/jsp/result/noPrivilege.jsp</result><!-- 没有权限 -->
+			<result name="input">/WEB-INF/jsp/result/noPrivilege.jsp</result><!-- 删除失败 -->
+			<result name="error">/WEB-INF/jsp/result/noPrivilege.jsp</result><!-- 查看失败 -->
+		</global-results>
+
+
+		<action name="userAction_*" class="userAction" method="{1}">
+			<result name="list" type="dispatcher">/WEB-INF/jsp/user/list.jsp</result>
+			<result name="toList" type="redirectAction">userAction_list</result>
+			<result name="addUI">/WEB-INF/jsp/user/addUI.jsp</result>
+			<result name="loginUI">/WEB-INF/jsp/user/loginUI.jsp</result>
+			<result name="editUI">/WEB-INF/jsp/user/editUI.jsp</result>
+			<result name="selfEditUI">/WEB-INF/jsp/user/selfEditUI.jsp</result>
+			<result name="self">/WEB-INF/jsp/user/self.jsp</result>
+			<result name="toSelf" type="redirectAction">userAction_self</result>
+			<result name="other">/WEB-INF/jsp/user/other.jsp</result>
+			<result name="chat">/WEB-INF/jsp/user/chat.jsp</result>
+			<result name="tohome" type="redirectAction">homeAction_list</result>
+			<result name="registerUI">/WEB-INF/jsp/user/registerUI.jsp</result>
+			<result name="result">/WEB-INF/jsp/user/result.jsp</result>
+			<result name="passwordUI">/WEB-INF/jsp/user/passwordUI.jsp</result>
+			<!-- 我觉得。放在session里后，就算重定向都可以取得到了 -->
+			<result name="homeList" type="redirectAction">homeAction_list</result>
+		</action>
+		
+		<action name="forumManageAction_*" class="forumManageAction"
+			method="{1}">
+			<result name="list">/WEB-INF/jsp/forumManage/list.jsp</result>
+			<result name="toList" type="redirectAction">forumManageAction_list</result>
+			<result name="addUI">/WEB-INF/jsp/forumManage/addUI.jsp</result>
+			<result name="editUI">/WEB-INF/jsp/forumManage/editUI.jsp</result>
+		</action>
+		
+		<action name="forumAction_*" class="forumAction" method="{1}">
+			<result name="list">/WEB-INF/jsp/forum/list.jsp</result>
+			<result name="show">/WEB-INF/jsp/forum/show.jsp</result>
+			<result name="index">/WEB-INF/jsp/home/index.jsp</result>
+		</action>
+		
+		<!-- 论坛：主题相关的功能 -->
+		<action name="topicAction_*" class="topicAction" method="{1}">
+			<result name="show">/WEB-INF/jsp/topic/show.jsp</result>
+			<result name="addUI">/WEB-INF/jsp/topic/addUI.jsp</result>
+			<result name="editUI">/WEB-INF/jsp/topic/editUI.jsp</result>
+			<result name="moveUI">/WEB-INF/jsp/topic/moveUI.jsp</result>
+			<!-- <result type="json" name="moveUI"> <param name="excludeProperties">topic</param> 
+				</result> -->
+			<result name="toForumShow" type="redirectAction">forumAction_show?id=${forumId}
+			</result>
+			<result name="toShow" type="redirectAction">topicAction_show?id=${id}</result>
+		</action>
+		
+		<!-- 论坛：回复相关的功能 -->
+		<action name="replyAction_*" class="replyAction" method="{1}">
+			<result name="addUI">/WEB-INF/jsp/reply/addUI.jsp</result>
+			<result name="editUI">/WEB-INF/jsp/reply/editUI.jsp</result>
+			<result name="toTopicShow" type="redirectAction">topicAction_show?id=${topicId}
+			</result>
+		</action>
+		
+		<!-- 首页显示Action -->
+		<action name="homeAction_*" class="homeAction" method="{1}">
+			<result name="list">/WEB-INF/jsp/home/list.jsp</result>
+			<result name="chat">/WEB-INF/jsp/home/chat.jsp</result>
+			<result name="top">/WEB-INF/jsp/home/top.jsp</result>
+			<result name="bottom">/WEB-INF/jsp/home/bottom.jsp</result>
+		</action>
+		
+		<!-- 文件列表读取与删除-->
+		<action name="myFileAction_*" class="myFileAction" method="{1}">
+			<!-- 文件列表读取 -->
+			<result name="list">/WEB-INF/jsp/myFile/list.jsp</result>
+			<!-- 这下面的两个为经典物理学家与实验都是word或者pdf文档 -->
+			<result name="author">/WEB-INF/jsp/introduce/author.jsp</result>
+			<result name="exp">/WEB-INF/jsp/introduce/exp.jsp</result>
+			<!-- 文件删除 -->
+			<result name="deleteVIDEO" type="redirectAction">myFileAction_videoList?userId=${userId}<!-- &amp;dataType=${dataTypeType} --></result>
+			<result name="deleteDOC" type="redirectAction">myFileAction_docList?userId=${userId}</result>
+			<result name="deleteAUDIO" type="redirectAction">myFileAction_audioList?userId=${userId}</result>
+			<result name="deleteIMG" type="redirectAction">myFileAction_imageList?userId=${userId}</result>
+			<result name="deleteOTHER" type="redirectAction">myFileAction_otherList?userId=${userId}</result>
+			<!-- 这下面的两个为经典物理学家与实验都是word或者pdf文档 -->
+			<result name="deleteAUTHOR" type="redirectAction">myFileAction_authorList?userId=0</result>
+			<result name="deleteEXP" type="redirectAction">myFileAction_expList?userId=0</result>
+		</action>
+		
+		<!-- 文件上传与下载 -->
+		<action name="fileHandleAction_*" class="fileHandleAction" method="{1}">
+			<!-- 文件上传 -->
+			<result name="toVideoList" type="redirectAction">myFileAction_videoList?userId=${userId}<!-- &amp;dataType=${dataTypeType} --></result>
+			<result name="toDocList" type="redirectAction">myFileAction_docList?userId=${userId}</result>
+			<result name="toAudioList" type="redirectAction">myFileAction_audioList?userId=${userId}</result>
+			<result name="toImgList" type="redirectAction">myFileAction_imageList?userId=${userId}</result>
+			<result name="toOtherList" type="redirectAction">myFileAction_otherList?userId=${userId}</result>
+			<!-- 这下面的两个为经典物理学家与实验都是word或者pdf文档 -->
+			<result name="toAuthorList" type="redirectAction">myFileAction_authorList?userId=0</result>
+			<result name="toExpList" type="redirectAction">myFileAction_expList?userId=0</result>
+			<!-- 文件下载 -->
+			<result name="success" type="stream">
+				<param name="contentType">application/octet-stream;charset="UTF-8"</param>
+				<param name="contentDisposition">attachment;filename=${model.trueName}</param>
+				<param name="inputName">inputStream</param>
+			</result>
+			<!-- 视频观看 -->
+			<result name="play">/WEB-INF/jsp/myFile/play.jsp</result>
+			<result name="errorPlay">/WEB-INF/jsp/result/errorPlay.jsp</result>
+			<!--文件阅读-->
+			<result name="readDoc">/WEB-INF/jsp/myFile/read.jsp</result>
+		</action>
+		
+		<!-- 公告只有老师才能发，控制权限即可-->
+		<action name="noticeAction_*" class="noticeAction" method="{1}">
+			<result name="toTeacherList" type="redirectAction">myFileAction_noticeList?userId=${userId}</result>
+			<result name="addUI">/WEB-INF/jsp/notice/addUI.jsp</result>
+			<result name="editUI">/WEB-INF/jsp/notice/editUI.jsp</result>
+			<result name="show">/WEB-INF/jsp/notice/show.jsp</result>
+		</action>
+		<!-- 在线测试 -->
+		<!-- <action name="examAction_*" class="examAction" method="{1}">
+			<result name="show">/WEB-INF/jsp/exam/show.jsp</result>
+			<result name="list">/WEB-INF/jsp/exam/list.jsp</result>
+		</action> -->
+		<action name="examTopicAction_*" class="examTopicAction" method="{1}">
+			<result name="list">/WEB-INF/jsp/exam/list.jsp</result>
+			<result name="uploadUI">/WEB-INF/jsp/exam/uploadUI.jsp</result>
+			<result name="toList" type="redirectAction">examTopicAction_list</result>
+			<result name="editUI">/WEB-INF/jsp/exam/editUI.jsp</result>
+			<result name="toShow" type="redirectAction">examOptionAction_show?examTopicId=${model.id}</result>
+		</action>
+		<action name="examOptionAction_*" class="examOptionAction" method="{1}">
+			<result name="show">/WEB-INF/jsp/exam/show.jsp</result>
+		</action>
+	</package>
+</struts>	

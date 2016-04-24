@@ -1,0 +1,68 @@
+*{margin: 0px;padding: 0px;}
+.content{border:1px solid #ddd;}
+#leftVideo{width:70%;height:100%;border:1px solid #eee;float: left;}
+#rightVideo{width:29%;height:100%;border:1px solid #eee;float:right;}
+#title{
+	text-align:center;
+	width:100%;
+	height:30px;
+	font-size: 20px;
+	font-family: "微软雅黑";
+}
+#play{
+	width:600px;height:400px;
+	margin: 0px auto;
+	
+}
+
+p{
+	width:100%;
+	height:14px;
+	font-size: 14px;
+	font-family: "微软雅黑";
+}
+p a{text-decoration: none;}
+#a1{
+	margin-top:5px;
+	width:100%;height:350px;
+}
+#look{
+	width:100%;
+	font-size: 12px;
+	font-family: "微软雅黑";
+	color:green;
+	margin-bottom: 100px;
+	margin-top: 5px;
+}
+#rightVideo #videoTitle{
+	text-align: center;
+	width:100%;
+	height:30px;
+	font-size: 20px;
+	font-family: "微软雅黑";
+}
+.rightVideo{
+	padding-left: 20px;
+	width: 93%;
+	/* border:1px solid #eee; */
+	padding-bottom: 5px;
+	padding-top: 5px;
+	}
+.rightVideo p{
+	font-size: 14px;
+	font-family: "微软雅黑";
+	height: 14px;
+	line-height: 100%;
+}
+
+.rightVideo .vedioTitle{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+} 
+.rightVideo .vedioTrueName{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+ }
+ 
